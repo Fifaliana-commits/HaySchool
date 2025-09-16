@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay School - Catégories</title>
+    <link rel="stylesheet" href="annexe/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="annexe/categories.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html" class="active"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="categories-container">
+        <h1>Choisis ta matière préférée</h1>
+        
+        <div class="categories-grid">
+            <div class="category-card" data-category="maths">
+                <a href="math.html">
+                    <div class="category-icon">🔢</div>
+                    <h3>Mathématiques</h3>
+                    <p>Découvre la magie des nombres</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 30%"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="category-card" data-category="francais">
+                <a href="francais.html">
+                    <div class="category-icon">📚</div>
+                    <h3>Français</h3>
+                    <p>Explore ta langue maternelle</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 45%"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="category-card" data-category="sciences">
+                <a href="sciences.html">
+                    <div class="category-icon">🔬</div>
+                    <h3>Sciences</h3>
+                    <p>Découvre le monde qui t'entoure</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 20%"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="category-card" data-category="histoire">
+                <a href="histoire.html">
+                    <div class="category-icon">🏛️</div>
+                    <h3>Histoire</h3>
+                    <p>Voyage dans le temps</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 15%"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="category-card" data-category="geographie">
+                <a href="geographie.html">
+                    <div class="category-icon">🌍</div>
+                    <h3>Géographie</h3>
+                    <p>Explore le monde</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 25%"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="category-card" data-category="anglais">
+                <a href="anglais.html">
+                    <div class="category-icon">🗣️</div>
+                    <h3>Anglais</h3>
+                    <p>Apprends une nouvelle langue</p>
+                    <div class="progress-bar">
+                        <div class="character"></div>
+                        <div class="progress-line" style="width: 35%"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="annexe/categories.js"></script>
+    <script src="annexe/nav.js"></script>
+</body>
+</html>

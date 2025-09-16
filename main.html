@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay School - Accueil</title>
+    <link rel="stylesheet" href="annexe/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <div class="welcome-container">
+        <div class="content">
+            <div class="image-container">
+                <img src="image/haapy.png" alt="Bienvenue" class="welcome-image">
+            </div>
+            <div class="text-container">
+                <p class="welcome-text">
+                    Explore un monde de connaissances conçu spécialement pour toi.
+                    Chaque leçon te rapproche de tes rêves. Apprendre, c'est bâtir ton avenir, alors, prêt(e) à commencer ?
+                </p>
+                <a href="creer-profil.html" class="start-button">COMMENCER</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="categories-section">
+        <h2 class="section-title">Nos Catégories</h2>
+        <div class="categories-grid">
+            <div class="category-card" onclick="window.location.href='geographie.html'">
+                <div class="category-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Géographie</h3>
+                <p>Découvre le monde et ses merveilles</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='mathematiques.html'">
+                <div class="category-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Mathématiques</h3>
+                <p>Apprends à résoudre des problèmes</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='sciences.html'">
+                <div class="category-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Sciences</h3>
+                <p>Explore les mystères de la nature</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='histoire.html'">
+                <div class="category-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>Histoire</h3>
+                <p>Voyage dans le temps</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='francais.html'">
+                <div class="category-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Français</h3>
+                <p>Maîtrise la langue française</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='anglais.html'">
+                <div class="category-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Anglais</h3>
+                <p>Apprends une nouvelle langue</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+</body>
+</html>

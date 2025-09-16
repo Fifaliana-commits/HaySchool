@@ -1,0 +1,122 @@
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.welcome-content {
+    text-align: center;
+    animation: popIn 0.5s ease-out 0.3s both;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.welcome-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    animation: avatarPop 0.5s ease-out 0.5s both;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    font-family: 'Comic Neue', cursive;
+}
+
+.welcome-message {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.welcome-message .welcome-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #4CAF50;
+}
+
+.welcome-message h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.welcome-message p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes avatarPop {
+    from {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .welcome-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .welcome-text {
+        font-size: 2rem;
+    }
+
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire - Hay School</title>
+    <link rel="stylesheet" href="annexe/styles.css">
+    <link rel="stylesheet" href="annexe/histoire.css">
+    <link rel="stylesheet" href="annexe/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="history-header">
+        <h1>Voyage dans le Temps !</h1>
+        <p>Découvre les grandes aventures de l'Histoire</p>
+    </div>
+
+    <div class="history-content">
+        <!-- Ligne du temps interactive -->
+        <section class="timeline-section">
+            <h2>La Ligne du Temps</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-era="prehistoire">
+                    <div class="era-icon">🦕</div>
+                    <h3>La Préhistoire</h3>
+                    <p>De -3 millions d'années à -3000</p>
+                </div>
+                <div class="timeline-item" data-era="antiquite">
+                    <div class="era-icon">🏛️</div>
+                    <h3>L'Antiquité</h3>
+                    <p>De -3000 à 476</p>
+                </div>
+                <div class="timeline-item" data-era="moyen-age">
+                    <div class="era-icon">🏰</div>
+                    <h3>Le Moyen Âge</h3>
+                    <p>De 476 à 1492</p>
+                </div>
+                <div class="timeline-item" data-era="temps-modernes">
+                    <div class="era-icon">⚔️</div>
+                    <h3>Les Temps Modernes</h3>
+                    <p>De 1492 à 1789</p>
+                </div>
+                <div class="timeline-item" data-era="epoque-contemporaine">
+                    <div class="era-icon">🚂</div>
+                    <h3>L'Époque Contemporaine</h3>
+                    <p>De 1789 à nos jours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contenu Détaillé -->
+        <section class="era-content" id="era-details">
+            <div class="era-card prehistoire">
+                <h2>La Préhistoire</h2>
+                <div class="era-info">
+                    <div class="info-card">
+                        <h3>Les Premiers Humains</h3>
+                        <p>Découvre comment vivaient nos ancêtres !</p>
+                        <ul>
+                            <li>La découverte du feu 🔥</li>
+                            <li>Les outils en pierre 🪨</li>
+                            <li>Les peintures rupestres 🎨</li>
+                        </ul>
+                    </div>
+                    <div class="interactive-element">
+                        <div class="discovery-game">
+                            <h4>Jeu des Découvertes</h4>
+                            <div class="game-area">
+                                <img src="image/prehistoire-tools.jpg" alt="Outils préhistoriques" class="discovery-image">
+                                <button class="discovery-btn">Explorer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="era-card antiquite">
+                <h2>L'Antiquité</h2>
+                <div class="era-info">
+                    <div class="info-card">
+                        <h3>Les Grandes Civilisations</h3>
+                        <p>Explore les civilisations antiques !</p>
+                        <ul>
+                            <li>L'Égypte des pharaons 🔮</li>
+                            <li>La Grèce antique 🏺</li>
+                            <li>L'Empire romain 🏛️</li>
+                        </ul>
+                    </div>
+                    <div class="interactive-element">
+                        <div class="civilization-quiz">
+                            <h4>Quiz des Civilisations</h4>
+                            <div class="quiz-area">
+                                <p id="quiz-question">Qui était le premier empereur romain ?</p>
+                                <div class="quiz-options"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autres sections d'époques similaires -->
+        </section>
+
+        <!-- Section Activités -->
+        <section class="activities-section">
+            <h2>Activités Historiques</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">🎭</div>
+                    <h3>Théâtre Historique</h3>
+                    <p>Joue des scènes historiques célèbres</p>
+                    <button class="start-activity">Commencer</button>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🗺️</div>
+                    <h3>Cartes Anciennes</h3>
+                    <p>Explore les territoires d'autrefois</p>
+                    <button class="start-activity">Explorer</button>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">👑</div>
+                    <h3>Qui suis-je ?</h3>
+                    <p>Devine le personnage historique</p>
+                    <button class="start-activity">Jouer</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> Guide Historique</h3>
+            <button class="close-chat" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <!-- Les messages s'afficheront ici -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Pose une question sur l'Histoire...">
+            <button class="send-message" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+    <script src="annexe/histoire.js"></script>
+    <script src="annexe/histoire-chat.js"></script>
+</body>
+</html>

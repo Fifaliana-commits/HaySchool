@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay School - Créer ton profil</title>
+    <link rel="stylesheet" href="annexe/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="annexe/creer-profil.css">
+    <link rel="stylesheet" href="annexe/welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html" ><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html" ><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html" class="active"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            
+            <h1>Crée ton profil</h1>
+            
+            <form class="profile-form" id="profileForm">
+                <div class="avatar-section">
+                    <div class="avatar-preview" id="avatarPreview">
+                        <img id="previewImg" src="image/default-avatar.png" alt="Avatar">
+                    </div>
+                    <label for="avatarInput" class="avatar-upload-btn">
+                        Choisis ton image
+                        <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Mon nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Mon prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <div class="form-group class-group">
+                    <label>Ma classe</label>
+                    <div class="class-selector">
+                        <select name="classe" id="classe" required>
+                            <option value="" disabled selected>Classe</option>
+                            <option value="cp1">CP1</option>
+                            <option value="cp2">CP2</option>
+                            <option value="ce1">CE1</option>
+                            <option value="ce2">CE2</option>
+                            <option value="cm1">CM1</option>
+                            <option value="cm2">CM2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group gender-group">
+                    <label>Je suis...</label>
+                    <div class="gender-options">
+                        <label class="gender-option">
+                            <input type="radio" name="genre" value="garcon" required>
+                            <span class="gender-icon">👦</span>
+                            <span>Garçon</span>
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="genre" value="fille">
+                            <span class="gender-icon">👧</span>
+                            <span>Fille</span>
+                        </label>
+                    </div>
+                </div>
+
+              
+
+                <button type="submit" class="save-button">Sauvegarder</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="welcome-overlay" style="display: none;">
+        <div class="welcome-message">
+            <img id="welcomeAvatar" src="" alt="Avatar" class="welcome-avatar">
+            <h2>Bienvenue!</h2>
+            <p id="welcomeUserInfo"></p>
+        </div>
+    </div>
+
+    <!-- <script type="module"> 
+        
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase, ref, set, get,child } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfvdPRVsAwCVJKumT9auDz-xPP8ajROsc",
+            authDomain: "hayschool-1aecd.firebaseapp.com",
+            projectId: "hayschool-1aecd",
+            storageBucket: "hayschool-1aecd.firebasestorage.app",
+            messagingSenderId: "743730530001",
+            appId: "1:743730530001:web:685da061b9f979f4e227f0"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        //get ref to database services
+        const db = getDatabase(app);
+        document.getElementById("submit").addEventListener('click',function(e){
+            e.preventDefault();                                                                                                                                                                            
+            set(ref(db, 'user/' + document.getElementById("nom").value),
+            {
+                nom: document.getElementById("nom").value,
+                prenom: document.getElementById("prenom").value,
+                classe: document.getElementById("classe").value,
+                image:document.getElementById("avatarInput").value
+
+            });
+            // alert("LoginSuccesfull!")
+        })
+    </script>
+    -->
+
+    <script src="annexe/creer-profil.js"></script>
+    <script src="annexe/nav.js"></script>
+</body>
+</html>

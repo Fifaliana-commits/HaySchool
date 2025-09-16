@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay School - Géographie</title>
+    <link rel="stylesheet" href="annexe/main.css">
+    <link rel="stylesheet" href="annexe/geographie.css">
+    <link rel="stylesheet" href="annexe/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </nav>
+
+    <div class="geo-container">
+        <div class="progress-section">
+            <div class="level-info">
+                <span class="level">Niveau 1</span>
+                <div class="xp-bar">
+                    <div class="xp-progress" style="width: 0%"></div>
+                </div>
+                <span class="xp-text">0 / 100 XP</span>
+            </div>
+
+            <div class="achievements">
+                <i class="fas fa-trophy trophy-locked" title="Explorateur Débutant"></i>
+                <i class="fas fa-medal trophy-locked" title="Maître des Continents"></i>
+                <i class="fas fa-star trophy-locked" title="Expert en Géographie"></i>
+            </div>
+        </div>
+
+        <div class="learning-paths">
+            <div class="path-card" onclick="startLesson('continents')">
+                <div class="path-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Les Continents</h3>
+                <p>Découvre les 7 continents et leurs caractéristiques uniques</p>
+                <div class="progress-indicator">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="path-card" onclick="startLesson('climat')">
+                <div class="path-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+                <h3>Les Climats</h3>
+                <p>Explore les différents climats du monde</p>
+                <div class="progress-indicator">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="path-card" onclick="startLesson('relief')">
+                <div class="path-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3>Le Relief</h3>
+                <p>Découvre les montagnes, vallées et plaines</p>
+                <div class="progress-indicator">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-map">
+            <h2>Carte Interactive</h2>
+            <div class="map-container">
+                <!-- La carte sera chargée ici via JavaScript -->
+            </div>
+        </div>
+
+        <div class="daily-challenge">
+            <h2>Défi du Jour <i class="fas fa-star"></i></h2>
+            <div class="challenge-card">
+                <p class="challenge-text">Trouve 3 pays d'Afrique et leurs capitales</p>
+                <button class="challenge-button">Relever le défi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+    <script src="annexe/geographie.js"></script>
+    <script src="annexe/chatbot.js"></script>
+</body>
+</html>

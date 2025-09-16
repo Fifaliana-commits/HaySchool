@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathématiques - Hay School</title>
+    <link rel="stylesheet" href="annexe/styles.css">
+    <link rel="stylesheet" href="annexe/math.css">
+    <link rel="stylesheet" href="annexe/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="math-header">
+        <h1>Les Mathématiques Amusantes!</h1>
+        <p>Découvre le monde magique des nombres et des formes !</p>
+    </div>
+
+    <div class="math-content">
+        <!-- Section Nombres -->
+        <section class="learning-section" id="numbers">
+            <h2>Les Nombres</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Compter et Calculer</h3>
+                    <p>Apprends à compter et à faire des calculs simples !</p>
+                    <div class="math-examples">
+                        <div class="math-example">1 + 1 = 2</div>
+                        <div class="math-example">2 × 3 = 6</div>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-sort-numeric-up"></i>
+                    </div>
+                    <h3>Nombres jusqu'à 100</h3>
+                    <p>Découvre les nombres de 1 à 100 !</p>
+                    <div class="number-grid">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>100</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Formes -->
+        <section class="learning-section" id="shapes">
+            <h2>Les Formes Géométriques</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Formes de Base</h3>
+                    <p>Découvre les formes géométriques !</p>
+                    <div class="shapes-container">
+                        <div class="shape circle"></div>
+                        <div class="shape square"></div>
+                        <div class="shape triangle"></div>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Mesures</h3>
+                    <p>Apprends à mesurer et comparer !</p>
+                    <div class="measurement-examples">
+                        <span>Plus grand que ></span>
+                        <span>Plus petit que <</span>
+                        <span>Égal à =</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Jeux -->
+        <section class="learning-section" id="games">
+            <h2>Jeux Mathématiques</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Calcul Mental</h3>
+                    <p>Entraîne-toi au calcul mental avec des jeux amusants !</p>
+                    <button class="play-button">Jouer</button>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Problèmes Amusants</h3>
+                    <p>Résous des problèmes mathématiques en t'amusant !</p>
+                    <button class="play-button">Commencer</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> Assistant Mathématiques</h3>
+            <button class="close-chat" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <!-- Les messages s'afficheront ici -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Pose-moi une question sur les maths !">
+            <button class="send-message" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+    <script src="annexe/math.js"></script>
+    <script src="annexe/math-chat.js"></script>
+</body>
+</html>

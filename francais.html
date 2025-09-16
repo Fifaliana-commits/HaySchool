@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Français - Hay School</title>
+    <link rel="stylesheet" href="annexe/styles.css">
+    <link rel="stylesheet" href="annexe/francais.css">
+    <link rel="stylesheet" href="annexe/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="francais-header">
+        <h1>Découvre la Magie du Français</h1>
+        <p>Embarque dans une aventure passionnante à travers la langue française ! Des histoires captivantes et des jeux amusants t'attendent.</p>
+    </div>
+
+    <div class="francais-section">
+        <!-- Section Grammaire -->
+        <section id="grammaire" class="topic-section">
+            <h2>La Grammaire</h2>
+            <div class="content-grid">
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Les Temps Verbaux</h3>
+                    <p>Découvre le présent, le passé et le futur</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Les Accords</h3>
+                    <p>Apprends à accorder les noms et les adjectifs</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Vocabulaire -->
+        <section id="vocabulaire" class="topic-section">
+            <h2>Le Vocabulaire</h2>
+            <div class="content-grid">
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Les Synonymes</h3>
+                    <p>Enrichis ton vocabulaire avec des mots similaires</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Les Expressions</h3>
+                    <p>Découvre les expressions françaises courantes</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Lecture -->
+        <section id="lecture" class="topic-section">
+            <h2>La Lecture</h2>
+            <div class="content-grid">
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Histoires Courtes</h3>
+                    <p>Lis et comprends des histoires adaptées à ton niveau</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="card-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Compréhension Orale</h3>
+                    <p>Écoute et comprends des dialogues en français</p>
+                    <div class="lesson-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> Assistant Français</h3>
+            <button class="close-chat" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <!-- Les messages s'afficheront ici -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Pose ta question sur le français...">
+            <button class="send-message" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+    <script src="annexe/francais.js"></script>
+    <script src="annexe/francais-chat.js"></script>
+</body>
+</html>

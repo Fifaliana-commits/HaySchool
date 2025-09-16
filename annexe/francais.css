@@ -1,0 +1,127 @@
+/* Styles pour la page français */
+.francais-header {
+    background: linear-gradient(135deg, #FF9933, #FFCC00); /* Orange vif vers jaune soleil */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px; /* Ajouter l'espacement après la navbar */
+    margin-bottom: 30px;
+}
+
+.francais-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-family: 'Comic Neue', cursive;
+}
+
+.francais-header p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.francais-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.topic-section {
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topic-section h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.lesson-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 153, 51, 0.2); /* Ombre légèrement orangée */
+    cursor: pointer;
+    border: 2px solid #FFE4B5; /* Bordure couleur pêche claire */
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    border-color: #FFB347; /* Orange plus vif au survol */
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF6B6B, #FFB347); /* Rouge doux vers orange */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.card-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.lesson-card h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.lesson-card p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.lesson-progress {
+    background: #FFE4E1; /* Fond rose très clair */
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #FF9933, #FFCC00); /* Orange vif vers jaune */
+    transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .francais-header h1 {
+        font-size: 2em;
+    }
+
+    .francais-header p {
+        font-size: 1em;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-section {
+        padding: 15px;
+    }
+}

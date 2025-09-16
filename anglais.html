@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English - Hay School</title>
+    <link rel="stylesheet" href="annexe/styles.css">
+    <link rel="stylesheet" href="annexe/anglais.css">
+    <link rel="stylesheet" href="annexe/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="image/haapy.png" alt="Hay School Logo" class="nav-logo">
+            <span>Hay School</span>
+        </div>
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="categories.html"><i class="fas fa-th-large"></i> Catégories</a>
+            <a href="creer-profil.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> À propos</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="english-header">
+        <h1>Let's Learn English Together!</h1>
+        <p>Découvre l'anglais de façon amusante avec des jeux, des chansons et des histoires !</p>
+    </div>
+
+    <div class="english-content">
+        <!-- Section Vocabulaire -->
+        <section class="learning-section" id="vocabulary">
+            <h2>Vocabulary Fun</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Food & Colors</h3>
+                    <p>Learn colors and food names through fun activities!</p>
+                    <div class="examples">
+                        <span class="example-word">Red Apple</span>
+                        <span class="example-word">Yellow Banana</span>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Animals</h3>
+                    <p>Discover animal names with sounds and pictures!</p>
+                    <div class="examples">
+                        <span class="example-word">Cat - Meow</span>
+                        <span class="example-word">Dog - Woof</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expression -->
+        <section class="learning-section" id="expressions">
+            <h2>Daily Expressions</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Greetings</h3>
+                    <p>Learn how to say hello and make friends!</p>
+                    <div class="examples">
+                        <span class="example-word">Hello!</span>
+                        <span class="example-word">How are you?</span>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Feelings</h3>
+                    <p>Express how you feel in English!</p>
+                    <div class="examples">
+                        <span class="example-word">I'm happy 😊</span>
+                        <span class="example-word">I'm excited! 🎉</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Interactive -->
+        <section class="learning-section" id="interactive">
+            <h2>Fun Activities</h2>
+            <div class="cards-container">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Songs</h3>
+                    <p>Learn English through catchy songs!</p>
+                    <div class="song-preview">
+                        <i class="fas fa-play"></i>
+                        <span>ABC Song</span>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Stories</h3>
+                    <p>Read fun short stories in English!</p>
+                    <div class="story-preview">
+                        <img src="image/story-preview.jpg" alt="Story Preview">
+                        <span>The Happy Cat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> English Assistant</h3>
+            <button class="close-chat" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <!-- Les messages s'afficheront ici -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Ask me anything about English!">
+            <button class="send-message" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="annexe/nav.js"></script>
+    <script src="annexe/anglais.js"></script>
+    <script src="annexe/anglais-chat.js"></script>
+</body>
+</html>

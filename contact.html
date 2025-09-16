@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hay School</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-item i {
+            margin-right: 1rem;
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            background-color: #e8f5e9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #ff0000;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous contacter !</p>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Autres moyens de nous contacter</h3>
+            <div class="contact-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>FIIIB 035 Bemasoandro,City</p>
+            </div>
+            <div class="contact-info-item">
+                <i class="fas fa-phone"></i>
+                <p>+33 1 23 45 67 89</p>
+            </div>
+            <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <p>contact@hay-school.fr</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validation du formulaire
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Vérification des champs
+            if (name.length < 2) {
+                showError('name', 'Le nom doit contenir au moins 2 caractères');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showError('email', 'Veuillez entrer une adresse email valide');
+                return;
+            }
+            
+            if (subject.length < 3) {
+                showError('subject', 'Le sujet doit contenir au moins 3 caractères');
+                return;
+            }
+            
+            if (message.length < 10) {
+                showError('message', 'Le message doit contenir au moins 10 caractères');
+                return;
+            }
+
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+
+            try {
+                const formData = {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                };
+
+                // Simulation d'envoi (à remplacer par votre API réelle)
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Réinitialiser le formulaire
+                this.reset();
+                showSuccess('Message envoyé avec succès !');
+            } catch (error) {
+                showError('form', 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer le message';
+            }
+        });
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            
+            // Supprimer les messages d'erreur existants
+            const existingError = field.parentElement.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            field.parentElement.appendChild(errorDiv);
+            field.classList.add('error');
+            
+            // Supprimer l'erreur après 3 secondes
+            setTimeout(() => {
+                errorDiv.remove();
+                field.classList.remove('error');
+            }, 3000);
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.textContent = message;
+            
+            const form = document.getElementById('contactForm');
+            form.insertAdjacentElement('beforebegin', successDiv);
+            
+            // Supprimer le message après 3 secondes
+            setTimeout(() => {
+                successDiv.remove();
+            }, 3000);
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
