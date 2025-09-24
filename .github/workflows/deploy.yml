@@ -73,6 +73,9 @@ jobs:
     - name: Install Wrangler
       run: npm install -g wrangler
 
+    - name: Create Pages project (if not exists)
+      run: wrangler pages project create hay-school-frontend --production-branch=main || echo "Project may already exist"
+
     - name: Deploy to Cloudflare Pages
       run: wrangler pages deploy dist --project-name=hay-school-frontend --branch=main --commit-dirty=true
       env:
