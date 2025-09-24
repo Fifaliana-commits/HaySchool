@@ -1,0 +1,420 @@
+{
+  "name": "Hay School Development Tasks",
+  "description": "Comprehensive task breakdown based on Hay School specifications for Malagasy children's educational platform",
+  "version": "1.0.0",
+  "created": "2025-09-16",
+  "boards": [
+    {
+      "name": "Core Platform Architecture",
+      "description": "Fundamental platform features and infrastructure",
+      "columns": ["Backlog", "In Progress", "Review", "Done"],
+      "tasks": [
+        {
+          "id": "platform-setup",
+          "title": "Set up project infrastructure and development environment",
+          "description": "Configure development environment with proper tooling, version control, and basic project structure",
+          "status": "Done",
+          "priority": "High",
+          "assignee": "Development Team",
+          "tags": ["infrastructure", "setup"],
+          "requirements": ["FR-009: Age-appropriate content safety"],
+          "estimatedHours": 8
+        },
+        {
+          "id": "subject-modules",
+          "title": "Implement 6 core subject modules (Math, French, Sciences, History, Geography, English)",
+          "description": "Create consistent learning patterns and navigation structure for all 6 subjects with Malagasy curriculum alignment",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["core", "subjects", "ui"],
+          "requirements": ["FR-001: 6 core subjects with consistent patterns"],
+          "estimatedHours": 40
+        },
+        {
+          "id": "child-profile-system",
+          "title": "Develop child profile creation and management system",
+          "description": "Create user profile system for children with age, preferences, and skill level tracking",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["profile", "user-management", "ui"],
+          "requirements": ["Child Profile entity", "FR-009: Age-appropriate content"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "progress-tracking",
+          "title": "Implement progress tracking and visual indicators",
+          "description": "Build system to track individual progress across all subjects with visual progress bars and achievements",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["progress", "gamification", "ui"],
+          "requirements": ["FR-004: Visual progress indicators", "Progress Tracking entity"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "adaptive-difficulty",
+          "title": "Create adaptive difficulty system based on child's skill level",
+          "description": "Implement algorithm to adjust content difficulty based on child's demonstrated performance and age",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Backend Team",
+          "tags": ["adaptive", "algorithm", "personalization"],
+          "requirements": ["FR-002: Adaptive content difficulty", "Difficulty Adaptation entity"],
+          "estimatedHours": 24
+        },
+        {
+          "id": "offline-capability",
+          "title": "Implement offline-first architecture for core learning content",
+          "description": "Ensure all core learning content works without internet connection using service workers and caching",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Frontend Team",
+          "tags": ["offline", "pwa", "performance"],
+          "requirements": ["FR-005: Offline access to core content"],
+          "estimatedHours": 32
+        },
+        {
+          "id": "cultural-context",
+          "title": "Integrate Malagasy cultural context throughout platform",
+          "description": "Add Malagasy cultural elements, examples, and context to all subjects and interactions",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Content Team",
+          "tags": ["cultural", "localization", "content"],
+          "requirements": ["FR-007: Malagasy cultural context", "FR-002: Cultural relevance"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "parent-monitoring",
+          "title": "Create parent monitoring and goal-setting features",
+          "description": "Build optional parental controls for monitoring progress and setting learning goals",
+          "status": "Backlog",
+          "priority": "Low",
+          "assignee": "Frontend Team",
+          "tags": ["parent", "monitoring", "optional"],
+          "requirements": ["FR-010: Parent monitoring capabilities"],
+          "estimatedHours": 16
+        }
+      ]
+    },
+    {
+      "name": "Interactive Learning System",
+      "description": "Engaging interactive learning experiences and feedback systems",
+      "columns": ["Backlog", "In Progress", "Review", "Done"],
+      "tasks": [
+        {
+          "id": "interactive-formats",
+          "title": "Implement multiple interactive learning formats",
+          "description": "Create visual, auditory, and kinesthetic learning activities (drag-drop, matching, audio interactions)",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["interactive", "multimodal", "learning"],
+          "requirements": ["FR-001: Multiple interactive formats", "Learning Activity entity"],
+          "estimatedHours": 48
+        },
+        {
+          "id": "immediate-feedback",
+          "title": "Build immediate encouraging feedback system",
+          "description": "Create system that provides instant, positive feedback for all user actions and quiz answers",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["feedback", "encouragement", "ux"],
+          "requirements": ["FR-002: Immediate encouraging feedback", "FR-003: Quiz feedback", "Feedback Mechanism entity"],
+          "estimatedHours": 24
+        },
+        {
+          "id": "progress-indicators",
+          "title": "Develop visual progress indicators and motivation system",
+          "description": "Create progress bars, completion indicators, and motivational elements to encourage continued learning",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Frontend Team",
+          "tags": ["progress", "motivation", "gamification"],
+          "requirements": ["FR-004: Progress indicators", "Progress Indicator entity"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "achievement-system",
+          "title": "Implement achievement and reward system",
+          "description": "Build badges, milestones, and celebration system for completed learning activities",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Frontend Team",
+          "tags": ["achievements", "rewards", "celebration"],
+          "requirements": ["FR-006: Achievement celebration", "Achievement System entity"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "contextual-help",
+          "title": "Create contextual help system for struggling children",
+          "description": "Implement system that detects when children need help and provides contextual assistance",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Frontend Team",
+          "tags": ["help", "contextual", "support"],
+          "requirements": ["FR-007: Contextual help when struggling"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "learning-patterns",
+          "title": "Implement learning pattern tracking and analysis",
+          "description": "Track how children learn and identify areas needing reinforcement or different approaches",
+          "status": "Backlog",
+          "priority": "Low",
+          "assignee": "Backend Team",
+          "tags": ["analytics", "patterns", "adaptive"],
+          "requirements": ["FR-009: Track learning patterns"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "activity-variation",
+          "title": "Create varied activity types to maintain engagement",
+          "description": "Develop different types of learning activities to prevent boredom and maintain interest",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Frontend Team",
+          "tags": ["variety", "engagement", "activities"],
+          "requirements": ["FR-008: Varied activity types"],
+          "estimatedHours": 24
+        },
+        {
+          "id": "safety-validation",
+          "title": "Implement comprehensive safety and appropriateness validation",
+          "description": "Ensure all interactive elements are safe, age-appropriate, and child-friendly",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "QA Team",
+          "tags": ["safety", "validation", "child-protection"],
+          "requirements": ["FR-010: Safe and age-appropriate interactions"],
+          "estimatedHours": 12
+        }
+      ]
+    },
+    {
+      "name": "Chatbot Assistance System",
+      "description": "AI-powered learning support and contextual help",
+      "columns": ["Backlog", "In Progress", "Review", "Done"],
+      "tasks": [
+        {
+          "id": "chatbot-core",
+          "title": "Implement core chatbot functionality with contextual help",
+          "description": "Create chatbot system that provides help related to current learning activities and subjects",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "AI Team",
+          "tags": ["chatbot", "ai", "help"],
+          "requirements": ["FR-001: Contextual help", "Help Request entity"],
+          "estimatedHours": 40
+        },
+        {
+          "id": "age-appropriate-responses",
+          "title": "Develop age-appropriate language and response system",
+          "description": "Create response system that uses simple, encouraging French appropriate for children aged 6-12",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "AI Team",
+          "tags": ["language", "age-appropriate", "french"],
+          "requirements": ["FR-002: Age-appropriate language", "FR-004: Simple encouraging French"],
+          "estimatedHours": 24
+        },
+        {
+          "id": "conversation-context",
+          "title": "Build conversation context maintenance system",
+          "description": "Implement system to maintain conversation context throughout learning sessions and subjects",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "AI Team",
+          "tags": ["context", "conversation", "memory"],
+          "requirements": ["FR-003: Maintain conversation context", "Response History entity"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "cultural-integration",
+          "title": "Integrate Malagasy cultural context into chatbot responses",
+          "description": "Add Malagasy cultural references, examples, and context to all chatbot explanations and interactions",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Content Team",
+          "tags": ["cultural", "malagasy", "context"],
+          "requirements": ["FR-006: Cultural context in explanations", "Cultural Context entity"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "multiple-interaction-modes",
+          "title": "Implement multiple ways to interact with chatbot",
+          "description": "Create text input, voice interaction, and button-based interaction modes for accessibility",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "Frontend Team",
+          "tags": ["accessibility", "voice", "interaction"],
+          "requirements": ["FR-005: Multiple interaction modes"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "independent-thinking",
+          "title": "Develop system to encourage independent thinking",
+          "description": "Create responses that guide children toward independent problem-solving while providing necessary help",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "AI Team",
+          "tags": ["thinking", "guidance", "learning"],
+          "requirements": ["FR-007: Encourage independent thinking"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "help-pattern-tracking",
+          "title": "Implement help request pattern tracking and analysis",
+          "description": "Track when and why children request help to identify learning gaps and improve content",
+          "status": "Backlog",
+          "priority": "Low",
+          "assignee": "Backend Team",
+          "tags": ["analytics", "patterns", "improvement"],
+          "requirements": ["FR-008: Track help patterns", "Learning Pattern entity"],
+          "estimatedHours": 12
+        },
+        {
+          "id": "response-consistency",
+          "title": "Ensure consistent responses across different subjects",
+          "description": "Maintain consistent quality and approach in chatbot responses across all 6 subjects",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "AI Team",
+          "tags": ["consistency", "quality", "subjects"],
+          "requirements": ["FR-009: Consistent responses across subjects"],
+          "estimatedHours": 14
+        },
+        {
+          "id": "content-safety-filters",
+          "title": "Implement comprehensive content safety and filtering",
+          "description": "Create filters to ensure all chatbot responses are safe, appropriate, and child-friendly",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "AI Team",
+          "tags": ["safety", "filtering", "child-protection"],
+          "requirements": ["FR-010: Safe and appropriate responses"],
+          "estimatedHours": 18
+        }
+      ]
+    },
+    {
+      "name": "Quality Assurance & Testing",
+      "description": "Testing, validation, and quality assurance tasks",
+      "columns": ["Backlog", "In Progress", "Review", "Done"],
+      "tasks": [
+        {
+          "id": "accessibility-testing",
+          "title": "Conduct comprehensive accessibility testing (WCAG 2.1 AA)",
+          "description": "Test all features for screen reader compatibility, keyboard navigation, and accessibility standards",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "QA Team",
+          "tags": ["accessibility", "wcag", "testing"],
+          "requirements": ["WCAG 2.1 AA compliance"],
+          "estimatedHours": 24
+        },
+        {
+          "id": "performance-testing",
+          "title": "Performance testing on target devices and networks",
+          "description": "Test application performance on low-end devices and 2G networks to ensure < 3s load times",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "QA Team",
+          "tags": ["performance", "devices", "networks"],
+          "requirements": ["< 3 second load times on 2G"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "cultural-validation",
+          "title": "Validate cultural appropriateness with Malagasy educators",
+          "description": "Review all content with Malagasy educators and cultural experts for appropriateness and relevance",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Content Team",
+          "tags": ["cultural", "validation", "educators"],
+          "requirements": ["Malagasy curriculum alignment"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "child-psychology-review",
+          "title": "Child psychology and pedagogy expert review",
+          "description": "Have child psychologists review all interactive elements and learning approaches",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "External Experts",
+          "tags": ["psychology", "pedagogy", "experts"],
+          "requirements": ["Child psychology review"],
+          "estimatedHours": 12
+        },
+        {
+          "id": "offline-functionality-test",
+          "title": "Test offline functionality across all features",
+          "description": "Verify that all core learning features work properly without internet connection",
+          "status": "Backlog",
+          "priority": "Medium",
+          "assignee": "QA Team",
+          "tags": ["offline", "testing", "functionality"],
+          "requirements": ["Offline-first architecture"],
+          "estimatedHours": 16
+        },
+        {
+          "id": "security-audit",
+          "title": "Conduct security audit for child safety",
+          "description": "Perform comprehensive security audit focusing on child data protection and platform safety",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "Security Team",
+          "tags": ["security", "audit", "child-safety"],
+          "requirements": ["Data privacy and safety"],
+          "estimatedHours": 20
+        },
+        {
+          "id": "user-acceptance-testing",
+          "title": "Conduct user acceptance testing with target age group",
+          "description": "Test platform with children aged 6-12 in controlled environment to validate usability and engagement",
+          "status": "Backlog",
+          "priority": "High",
+          "assignee": "UX Team",
+          "tags": ["uat", "children", "usability"],
+          "requirements": ["Child user validation"],
+          "estimatedHours": 32
+        },
+        {
+          "id": "parent-feedback-integration",
+          "title": "Integrate parent feedback and monitoring features",
+          "description": "Test and refine parent monitoring features with real parent feedback",
+          "status": "Backlog",
+          "priority": "Low",
+          "assignee": "Product Team",
+          "tags": ["parents", "feedback", "monitoring"],
+          "requirements": ["Parent monitoring capabilities"],
+          "estimatedHours": 16
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalTasks": 24,
+    "totalEstimatedHours": 564,
+    "highPriorityTasks": 12,
+    "mediumPriorityTasks": 8,
+    "lowPriorityTasks": 4,
+    "specifications": [
+      "001-hay-school-core",
+      "002-interactive-learning-system",
+      "003-chatbot-assistance-system"
+    ],
+    "constitutionArticles": [
+      "I. Child-First Design",
+      "II. Multilingual Excellence",
+      "III. Gamification-Driven Learning",
+      "IV. Offline-First Architecture",
+      "V. Progressive Web App Standards",
+      "VI. Data Privacy & Safety",
+      "VII. Modular Subject Architecture"
+    ]
+  }
+}

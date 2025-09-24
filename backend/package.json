@@ -4,7 +4,8 @@
   "description": "Backend for Hay School contact form",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "kanban": "npx vibe-kanban"
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -1,50 +1,77 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Hay School Constitution
+An educational platform for Malagasy children to learn through interactive, gamified experiences.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Child-First Design (NON-NEGOTIABLE)
+Every feature must prioritize child safety, accessibility, and educational value. Content must be age-appropriate, culturally relevant for Malagasy children, and promote positive learning experiences. All designs must pass child psychology and pedagogy reviews.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Multilingual Excellence
+Platform must support French as primary language with Malagasy cultural context. All content must be culturally appropriate and include Malagasy cultural elements. Language learning must be natural and contextual, not forced.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Gamification-Driven Learning
+Learning must be engaging through game mechanics, progress tracking, and rewards. Progress bars, achievements, and interactive elements must motivate continuous learning. Assessment must be formative, not punitive.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Offline-First Architecture
+Platform must work primarily offline with optional online features. Core learning content must be accessible without internet. Online features (leaderboards, parental controls) should enhance but not be required for learning.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Progressive Web App Standards
+Must follow PWA best practices for mobile-first design. Fast loading, responsive design, and smooth interactions are mandatory. Must work seamlessly on low-end devices common in Madagascar.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### VI. Data Privacy & Safety
+All user data must be protected with strict privacy controls. No tracking without explicit consent. Content must be safe for children with no external links or advertisements.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### VII. Modular Subject Architecture
+Each subject must be independently maintainable with consistent learning patterns. Subjects can be added/removed without affecting others. Content structure must be standardized across all subjects.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Educational Standards
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Content Quality Requirements
+- All educational content must align with Malagasy curriculum standards
+- Content must be reviewed by qualified educators
+- Interactive elements must reinforce learning objectives
+- Assessment must provide immediate, constructive feedback
+
+### Accessibility Standards
+- Must comply with WCAG 2.1 AA standards
+- Support for screen readers and assistive technologies
+- High contrast mode for visually impaired users
+- Simple language appropriate for primary school children
+
+### Performance Standards
+- Page load time < 3 seconds on 2G connections
+- Quiz responses < 200ms
+- Offline content caching for entire subjects
+- Battery-efficient animations and interactions
+
+## Development Workflow
+
+### Code Review Requirements
+- All code must be reviewed by at least one team member
+- Educational content changes require educator approval
+- Security-related changes require security review
+- Performance changes must include benchmarks
+
+### Testing Gates
+- Unit tests for all interactive components
+- Integration tests for subject modules
+- Accessibility testing for all new features
+- Performance testing on target devices
+
+### Deployment Approval Process
+- Development → Staging → Production pipeline
+- Automated testing must pass before deployment
+- Manual testing by educators required for content changes
+- Rollback plan must be documented for each deployment
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Constitution supersedes all other practices. Amendments require:
+1. Proposal with educational impact assessment
+2. Review by education specialists
+3. Team consensus and documentation
+4. Implementation plan with migration strategy
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All PRs/reviews must verify compliance with child safety and educational standards. Complexity must be justified by educational value. Use CLAUDE.md for runtime development guidance.
+
+**Version**: 1.0.0 | **Ratified**: 2025-09-16 | **Last Amended**: 2025-09-16
