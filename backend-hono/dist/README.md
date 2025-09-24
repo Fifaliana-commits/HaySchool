@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "hay-school-backend" generated at 2025-09-24T15:35:35.317Z.

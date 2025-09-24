@@ -1,0 +1,35 @@
+{
+  "name": "hay-school",
+  "version": "1.0.0",
+  "description": "Hay School - Educational platform for Malagasy children",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "kanban": "npx vibe-kanban",
+    "kanban:import": "node import-tasks-to-kanban.js",
+    "backend": "cd backend && npm start",
+    "start": "npm run dev",
+    "build": "echo 'No build step required for static HTML project'",
+    "lint": "echo 'No linting configured yet'",
+    "test": "echo 'No tests configured yet'",
+    "deploy": "npm run deploy:backend && npm run deploy:frontend",
+    "deploy:backend": "cd backend-hono && npm run cf:deploy",
+    "deploy:frontend": "cd hay-school-react && npm run cf:deploy",
+    "setup:secrets": "echo 'Set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in GitHub secrets'"
+  },
+  "keywords": [
+    "education",
+    "malagasy",
+    "children",
+    "learning",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Hay School Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

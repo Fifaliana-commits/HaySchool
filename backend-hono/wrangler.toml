@@ -1,0 +1,36 @@
+name = "hay-school-backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+account_id = "2162d7153d40325f96db8ef869fee06b"
+
+[env.production]
+# Add production-specific configuration here
+
+# Environment variables
+[vars]
+NODE_ENV = "production"
+
+# CORS configuration for production
+ALLOWED_ORIGINS = "https://hay-school.pages.dev,https://your-custom-domain.com"
+
+# Rate limiting (optional - implement in code)
+# RATE_LIMIT_REQUESTS = "100"
+# RATE_LIMIT_WINDOW = "60" # seconds
+
+# Database configuration (uncomment when using D1)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "hay-school-db"
+# database_id = "your-database-id"
+
+# KV namespace for caching (optional)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+# preview_id = "your-kv-preview-id"
+
+# R2 bucket for file storage (optional)
+# [[r2_buckets]]
+# binding = "STORAGE"
+# bucket_name = "hay-school-storage"
